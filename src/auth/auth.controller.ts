@@ -6,14 +6,14 @@ import {
   Body,
   UseGuards,
 } from '@nestjs/common';
-import { CreateUserDTO } from 'src/user/dtos/create-user.dto';
 import { UserService } from 'src/user/user.service';
 import { AuthService } from './auth.service';
-import { LocalAuthGuard } from './guards/local-auth.guard';
-import { JwtAuthGuard } from './guards/jwt-auth.guard';
 import { Roles } from './decorators/roles.decorator';
 import { Role } from './enums/role.enum';
 import { RolesGuard } from './guards/roles.guard';
+import { JwtAuthGuard } from './guards/jwt.guard';
+import { LocalAuthGuard } from './guards/local.guard';
+import { CreateUserDTO } from 'src/user/dtos/create-user-dto';
 
 @Controller('auth')
 export class AuthController {
