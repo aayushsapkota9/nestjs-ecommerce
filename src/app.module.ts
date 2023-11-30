@@ -8,7 +8,13 @@ import { AuthModule } from './auth/auth.module';
 import { CartModule } from './cart/cart.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/store'), ProductModule, UserModule, AuthModule, CartModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost:27017'),
+    ProductModule,
+    UserModule,
+    AuthModule,
+    CartModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
